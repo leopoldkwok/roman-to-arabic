@@ -13,7 +13,7 @@ class RomanNumerals
 		less_C  = number.scan(/C[MD]/).count
 		#less_CM  = number.scan(/M[C]/).count
 
-		result = ( 1 * times_I ) +
+		@result = ( 1 * times_I ) +
 						 ( 5 * times_V ) +
 						 ( 10 * times_X ) +
 						 ( 50 * times_L ) +
@@ -25,7 +25,9 @@ class RomanNumerals
 						 ( less_C * -200) 
 					#	 ( less_CM * - 200)
 
-		result
+		puts @result
 	end
 
 end
+
+RomanNumerals.roman_numerals_parser(ARGV.pop)
