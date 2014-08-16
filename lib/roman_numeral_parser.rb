@@ -1,11 +1,12 @@
 class String
 
 	def arabic
-	
-		fours = self.scan(/IV/).count
+
+		fours_or_nines = self.scan(/I[VX]/).count
 
 		self.count('I') +
 		(self.count('V') * 5) +
-		(fours * -2)
+		(self.count('X') * 10) +
+		(fours_or_nines * -2)
 	end
 end

@@ -18,6 +18,9 @@ describe 'a roman numeral string' do
 		expect('IV'.arabic).to be 4
 	end
 
-	
+	it "of IX becomes 9" do
+		expect('IX'.arabic).to be 9
+	end
+
 
 end
