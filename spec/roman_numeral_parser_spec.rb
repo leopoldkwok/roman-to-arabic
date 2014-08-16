@@ -19,8 +19,11 @@ describe RomanNumerals do
 	end
 
 	it "should know that L is 50" do
-
 		expect(RomanNumerals.roman_numerals_parser('L')).to eq 50
+	end
+
+	it "should know that C is 100" do
+		expect(RomanNumerals.roman_numerals_parser('C')).to eq 100
 	end
 
 end
