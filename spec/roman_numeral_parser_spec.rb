@@ -34,4 +34,12 @@ describe 'a roman numeral string' do
 		expect('CD'.arabic).to be 400
 	end
 
+	it "of CM becomes 900" do
+		expect('CM'.arabic).to be 900
+	end
+
+	it "of MMMCMXCIX becomes 3999" do
+		expect('MMMCMXCIX'.arabic).to be 3999
+	end
+
 end

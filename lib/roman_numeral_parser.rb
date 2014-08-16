@@ -12,6 +12,7 @@ class String
 		(self.count('L') * 50) +
 		(self.count('C') * 100) +
 		(self.count('D') * 500) +
+		(self.count('M') * 1000) +
 		(four_or_nine * -2) +
 		(forty_or_ninety * -20) +
 		(fourhundred_or_ninehundred * -200)
