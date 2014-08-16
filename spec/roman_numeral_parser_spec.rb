@@ -9,5 +9,9 @@ describe RomanNumerals do
 	it "should know that II is 2" do
 		expect(RomanNumerals.roman_numerals_parser('II')).to eq 2
 	end
+
+	it "should know that III is 3" do
+		expect(RomanNumerals.roman_numerals_parser('III')).to eq 3
+	end
 	
 end
