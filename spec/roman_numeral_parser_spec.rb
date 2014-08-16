@@ -35,18 +35,19 @@ describe RomanNumerals do
 	end
 
 	it "should know that XXV is 25" do
-
 		expect(RomanNumerals.roman_numerals_parser('XXV')).to eq 25
 	end
 
 	it "should know that XL is 40" do
-
 		expect(RomanNumerals.roman_numerals_parser('XL')).to eq 40
 	end
 
 	it "should know that XCIX is 99" do
-
 		expect(RomanNumerals.roman_numerals_parser('XCIX')).to eq 99
+	end
+
+	it "should know that CD is 400" do
+		expect(RomanNumerals.roman_numerals_parser('CD')).to eq 400
 	end
 
 end

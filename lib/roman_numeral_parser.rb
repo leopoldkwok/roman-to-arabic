@@ -6,18 +6,16 @@ class RomanNumerals
 		times_X = number.count('X')
 		times_L = number.count('L')
 		times_C = number.count('C')
-		has_IV = number.include?('IV')
-		has_IX = number.include?('IX')
-		has_XL = number.include?('XL')
+		less_I  = number.scan(/I[^I]/).count
+		less_X  = number.scan(/X[^XVI]/).count
 
 		result = ( 1 * times_I ) +
 						 ( 5 * times_V ) +
 						 ( 10 * times_X ) +
 						 ( 50 * times_L ) +
 						 ( 100 * times_C ) +
-						 ( has_IV ? -2 : 0 ) +
-						 ( has_IX ? -2 : 0) + 
-						 ( has_XL ? -20 : 0)
+						 ( less_I * -2 ) +
+						 ( less_X * -20 )
 
 		result
 	end
