@@ -4,10 +4,12 @@ class RomanNumerals
 		times_I = number.count('I') 
 		times_X = number.count('X')
 		times_L = number.count('L')
-
+		times_C = number.count('C')
+		
 		result = ( 1 * times_I ) + 
 						 ( 10 * times_X ) + 
-						 ( 50 * times_L )
+						 ( 50 * times_L ) +
+						 ( 100 * times_C)
 
 		result
 

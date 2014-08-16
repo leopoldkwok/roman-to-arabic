@@ -26,4 +26,8 @@ describe RomanNumerals do
 		expect(RomanNumerals.roman_numerals_parser('C')).to eq 100
 	end
 
+	it "should know that IV is 4" do
+		expect(RomanNumerals.roman_numerals_parser('IV')).to eq 4
+	end
+
 end
