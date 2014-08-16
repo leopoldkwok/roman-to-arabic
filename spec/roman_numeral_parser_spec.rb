@@ -1,10 +1,9 @@
-require 'roman_numerals_parser'
+require 'roman_numeral_parser'
 
-describe 'RomanNumerals' do
+describe RomanNumerals do
 	
 	it "should know that I is 1" do
-
-		expect(roman_numerals_parser('I')).to eq 1
+		expect(RomanNumerals.roman_numerals_parser('I')).to eq 1
 	end
 	
 end
