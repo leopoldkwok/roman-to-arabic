@@ -9,6 +9,7 @@ class String
 		(self.count('V') * 5) +
 		(self.count('X') * 10) +
 		(self.count('L') * 50) +
+		(self.count('C') * 100) +
 		(four_or_nine * -2) +
 		(forty_or_ninety * -20)
 

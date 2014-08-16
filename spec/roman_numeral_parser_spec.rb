@@ -25,6 +25,9 @@ describe 'a roman numeral string' do
 	it "of XL becomes 40" do
 		expect('XL'.arabic).to be 40
 	end
-
+	
+	it "of XC becomes 90" do
+		expect('XC'.arabic).to be 90
+	end
 
 end
