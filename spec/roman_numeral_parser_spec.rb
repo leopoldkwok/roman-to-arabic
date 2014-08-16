@@ -50,4 +50,13 @@ describe RomanNumerals do
 		expect(RomanNumerals.roman_numerals_parser('CD')).to eq 400
 	end
 
+	it "should know that M is 1000" do
+		expect(RomanNumerals.roman_numerals_parser('M')).to eq 1000
+	end
+
+	it "should know that CM is 900" do
+
+		expect(RomanNumerals.roman_numerals_parser('CM')).to eq 900
+	end
+
 end
