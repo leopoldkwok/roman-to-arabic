@@ -7,13 +7,15 @@ class RomanNumerals
 		times_L = number.count('L')
 		times_C = number.count('C')
 		has_IV = number.include?('IV')
+		has_IX = number.include?('IX')
 
 		result = ( 1 * times_I ) +
 						 ( 5 * times_V ) +
 						 ( 10 * times_X ) +
 						 ( 50 * times_L ) +
 						 ( 100 * times_C ) +
-						 ( has_IV ? -2 : 0 )
+						 ( has_IV ? -2 : 0 ) +
+						 ( has_IX ? -2 : 0)
 
 		result
 	end
