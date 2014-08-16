@@ -30,4 +30,8 @@ describe 'a roman numeral string' do
 		expect('XC'.arabic).to be 90
 	end
 
+	it "of CD becomes 400" do
+		expect('CD'.arabic).to be 400
+	end
+
 end
