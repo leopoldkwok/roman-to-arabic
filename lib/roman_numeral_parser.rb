@@ -2,6 +2,8 @@ class String
 
 	def arabic
 
+		raise unless self =~ /^M*(CM)?(CD)?D?(XC)?C{0,3}(XL)?L?X{0,3}(IX)?(IV)?V?I{0,3}$/
+
 		four_or_nine = self.scan(/I[VX]/).count
 		forty_or_ninety = self.scan(/X[LC]/).count
 		fourhundred_or_ninehundred = self.scan(/C[DM]/).count
