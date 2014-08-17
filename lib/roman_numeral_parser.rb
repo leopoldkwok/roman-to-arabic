@@ -1,38 +1,26 @@
-class RomanNumerals
+class String
 
-	def self.roman_numerals_parser(number)
-		times_I = number.count('I')
-		times_V = number.count('V')
-		times_X = number.count('X')
-		times_L = number.count('L')
-		times_C = number.count('C')
-		times_D = number.count('D')
-		times_M = number.count('M')
-		less_I  = number.scan(/I[^I]/).count
-		less_X  = number.scan(/X[^XVI]/).count
-		less_C  = number.scan(/C[MD]/).count
-		#less_CM  = number.scan(/M[C]/).count
+	def arabic
+		#checks validity of Roman numeral
+		raise(ArgumentError, "Invalid Roman Numeral") unless
+		self =~ /^M*(CM)?(CD|D)?(XC)?C{0,3}(XL|L)?X{0,3}(IX)?(IV|V)?I{0,3}$/
 
-		@result = ( 1 * times_I ) +
-						 ( 5 * times_V ) +
-						 ( 10 * times_X ) +
-						 ( 50 * times_L ) +
-						 ( 100 * times_C ) +
-						 ( 500 * times_D) +
-						 ( 1000 * times_M) + 
-						 ( less_I * -2 ) +
-						 ( less_X * -20 )+
-						 ( less_C * -200) 
-					#	 ( less_CM * - 200)
+		# Counts number of subtractive numerals in the string
+		four_or_nine = self.scan(/I[VX]/).count
+		forty_or_ninety = self.scan(/X[LC]/).count
+		fourhundred_or_ninehundred = self.scan(/C[DM]/).count
 
-		@result
+		# Calculates numeral total and subtracts contribution of subtractives
+		self.count('I') +
+		(self.count('V') * 5) +
+		(self.count('X') * 10) +
+		(self.count('L') * 50) +
+		(self.count('C') * 100) +
+		(self.count('D') * 500) +
+		(self.count('M') * 1000) +
+		(four_or_nine * -2) +
+		(forty_or_ninety * -20) +
+		(fourhundred_or_ninehundred * -200)
+
 	end
-
 end
-
-def runner(number)
-	RomanNumerals.roman_numerals_parser(ARGV.pop)
-	puts @result
-end
-
-# runner(gets.chomp)
