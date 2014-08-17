@@ -1,63 +1,57 @@
 require 'roman_numeral_parser'
 
-describe RomanNumerals do
+describe 'a roman numeral string' do
 
-	it "should know that I is 1" do
-		expect(RomanNumerals.roman_numerals_parser('I')).to eq 1
+	it "of I becomes 1" do
+		expect('I'.arabic).to be 1
 	end
 
-	it "should know that II is 2" do
-		expect(RomanNumerals.roman_numerals_parser('II')).to eq 2
+	it "of II becomes 2" do
+		expect('II'.arabic).to be 2
 	end
 
-	it "should know that III is 3" do
-		expect(RomanNumerals.roman_numerals_parser('III')).to eq 3
+	it "of V becomes 5" do
+		expect('V'.arabic).to be 5
 	end
 
-	it "should know that X is 10" do
-		expect(RomanNumerals.roman_numerals_parser('X')).to eq 10
+	it "of IV becomes 4" do
+		expect('IV'.arabic).to be 4
 	end
 
-	it "should know that L is 50" do
-		expect(RomanNumerals.roman_numerals_parser('L')).to eq 50
+	it "of IX becomes 9" do
+		expect('IX'.arabic).to be 9
 	end
 
-	it "should know that C is 100" do
-		expect(RomanNumerals.roman_numerals_parser('C')).to eq 100
+	it "of XL becomes 40" do
+		expect('XL'.arabic).to be 40
 	end
 
-	it "should know that IV is 4" do
-		expect(RomanNumerals.roman_numerals_parser('IV')).to eq 4
+	it "of XC becomes 90" do
+		expect('XC'.arabic).to be 90
 	end
 
-	it "should know that IX is 9" do
-		expect(RomanNumerals.roman_numerals_parser('IX')).to be 9
+	it "of CD becomes 400" do
+		expect('CD'.arabic).to be 400
 	end
 
-	it "should know that XXV is 25" do
-		expect(RomanNumerals.roman_numerals_parser('XXV')).to eq 25
+	it "of CM becomes 900" do
+		expect('CM'.arabic).to be 900
 	end
 
-	it "should know that XL is 40" do
-		expect(RomanNumerals.roman_numerals_parser('XL')).to eq 40
+	it "of MMMCMXCIX becomes 3999" do
+		expect('MMMCMXCIX'.arabic).to be 3999
 	end
 
-	it "should know that XCIX is 99" do
-		expect(RomanNumerals.roman_numerals_parser('XCIX')).to eq 99
+	it "of 'Bob Jones' raises an error" do
+		expect{ 'Bob Jones'.arabic }.to raise_error
 	end
 
-	it "should know that CD is 400" do
-		expect(RomanNumerals.roman_numerals_parser('CD')).to eq 400
+	it "of 'IIIIXXIXXI' raises an error" do
+		expect{ 'IIIIXXIXXI'.arabic }.to raise_error
 	end
 
-	it "should know that M is 1000" do
-		expect(RomanNumerals.roman_numerals_parser('M')).to eq 1000
+	it "of 'IVXLCDM' raises an error" do
+		expect{ 'IVXLCDM'.arabic }.to raise_error
 	end
-
-	it "should know that CM is 900" do
-		expect(RomanNumerals.roman_numerals_parser('CM')).to eq 900
-	end
-
-
 
 end
