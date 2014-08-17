@@ -25,9 +25,14 @@ class RomanNumerals
 						 ( less_C * -200) 
 					#	 ( less_CM * - 200)
 
-		puts @result
+		@result
 	end
 
 end
 
-RomanNumerals.roman_numerals_parser(ARGV.pop)
+def runner(number)
+	RomanNumerals.roman_numerals_parser(ARGV.pop)
+	puts @result
+end
+
+# runner(gets.chomp)
