@@ -50,4 +50,8 @@ describe 'a roman numeral string' do
 		expect{ 'IIIIXXIXXI'.arabic }.to raise_error
 	end
 
+	it "of 'IVXLCDM' raises an error" do
+		expect{ 'IVXLCDM'.arabic }.to raise_error
+	end
+
 end
