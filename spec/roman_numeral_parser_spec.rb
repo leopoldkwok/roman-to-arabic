@@ -41,7 +41,7 @@ describe 'a roman numeral string' do
 	it "of MMMCMXCIX becomes 3999" do
 		expect('MMMCMXCIX'.arabic).to be 3999
 	end
-	
+
 	it "of 'Bob Jones' raises an error" do
 		expect{ 'Bob Jones'.arabic }.to raise_error
 	end
