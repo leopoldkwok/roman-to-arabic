@@ -1,3 +1,4 @@
+[![Test Coverage](https://codeclimate.com/github/leopoldkwok/roman-to-arabic/badges/coverage.svg)](https://codeclimate.com/github/leopoldkwok/roman-to-arabic)
 Roman to Arabic
 ===============
 
